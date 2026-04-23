@@ -1,5 +1,8 @@
 # Day1_OSI
  Appilcation layer --> Presentation layer --> Session layer --> Transport layer --> Network layer --> Datalink layer --> Physical layer
+ uses protocols such   compressing/encrypting/ create-maintain-  TCP/UDP protocols   IP Address        MAC Address       data converted into bits
+ as https/ftp/smtp     formatting data         end session         sequencing data    (packets)        (frames)                                      
+         
  **COMMON PORTS**
 HTTP(80) used to request webpages but it's not secure
 HTTPS(443) does exactly as http but in a secured way
