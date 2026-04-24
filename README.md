@@ -25,6 +25,7 @@ few terms before configuring DHCP server
 2. Lease time/duration: time given to a device before deassigning an ip address
 3. reservation: a particular address is dedicated to a dive with specific MAC address everytime it joins the network
 4.Relay: DHCP provides or assignes ip addresses to different network within a subnet mask
+DNS resolution chain: query from browser--> cache--> hostfile --> resolver(like ISP DNS first checks cache;if NOT then)--> ROOT server--> TLD server--> authoritative name server--> gives the address and sent back to client
 
 DNS
 forward lookup zone: translates domain name to ip
@@ -34,3 +35,28 @@ Non-Authoritative DNS zone: information obtained from other sources like authori
 primary zone: its a file where actual dns records are saved and managed; All the records can be changed here
 Secondary zone: file acts as a read-only of primary zone;acts as a backup and improves response time for clients
 DNSSEC,DNS OVER HTTPS(DoH), DNS OVER TLS(DoT)
+# Day3_linux
+SSH is used to securely login/access the computer remotely
+basic commands:
+ls-lists all the files
+cat-opens a file
+du-gives disk usage of a file
+du filename
+find- helps to find/filter out the files or directories based on filetype, size, modified time, permissions etc
+file- gives the type of file(not only the extension)
+file filename
+**dashed filenames:**
+ex:"-sample.txt"
+use delimiter in this case; anything followed by "--" is considered as filename
+ex: cat -- -sample.txt(to open -sample.txt)
+use ./ followed by filename to tell terminal that dashed filename is in current directory
+use \ to make terminal skip considering the space
+**Hidden file:** filename starting with period(.) are considered as hidden file
+use -a to list all the files including hidden files
+-la to list all files including permissions
+-A to list all files along with hidden files excluding (.)&(..) files
+filtering the files based on filetype and size
+find . -type f -size xxxc
+. speacifies find from current directory
+f is a file d is directory
+xxx is filesize
