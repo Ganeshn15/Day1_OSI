@@ -60,3 +60,26 @@ find . -type f -size xxxc
 . speacifies find from current directory
 f is a file d is directory
 xxx is filesize
+# Day4_Eventid
+event ids(can be accessed by event viewer)
+4624-successful login
+4625-failed login
+4672-admin login
+4720-new user created
+4726-user deleted
+4725-user disabled
+event id- tells what type event occurred
+event logon type-tells how it happened
+logon types: type2-interactive i.e, logged in person
+type3- access over the network
+file share access
+type8- plaintext
+type9-logged in using new credentials
+type10-remote logins
+type11- cached logins(offline)
+
+core methods of powershell analysis:
+1. Get-EventLog: pulls the event logs based on event ids and other filters
+2. Get-WinEvent: same as Get-EventLog but more robust
+3. Where-Object: filters result by specifying objects such as admin
+4. Select-Object: gives only selected fields in output
